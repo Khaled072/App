@@ -1,0 +1,133 @@
+
+import SwiftUI
+import UIKit
+
+struct ContentView: View {
+    var body: some View {
+        ZStack {
+            Color(.white)
+                .ignoresSafeArea()
+            
+            VStack {
+                Image("mlc-logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                .frame(height: 75.0)
+                Spacer()
+                    .frame( height: 80.0)
+                
+                Button(action: {
+                    if let url = URL(string: "https://mslc.sdsu.edu/") {
+                       UIApplication.shared.open(url)
+                    }
+                }) {
+                    Text("Home")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                        .padding()
+                        .background(Color.black)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+                
+            
+                .frame(height: 75.0)
+                
+                Button(action: {
+                    if let url = URL(string: "https://mslc.sdsu.edu/question-queue/") {
+                       UIApplication.shared.open(url)
+                    }
+                }) {
+                    Text("Tutoring Check-in")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                        .padding()
+                        .background(Color(hue: 1.0, saturation: 0.83, brightness: 0.5))                          .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+                
+                .frame(height: 75.0)
+                
+                Button(action: {
+                    if let url = URL(string: "https://mslc.sdsu.edu/ta-office-hours/") {
+                       UIApplication.shared.open(url)
+                    }
+                }) {
+                    Text("TA Office Hours")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                        .padding()
+                        .background(Color.black)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+                
+               
+                .frame(height: 75.0)
+
+                Button(action: {
+                    if let url = URL(string: "https://mslc.sdsu.edu/general-resources/") {
+                       UIApplication.shared.open(url)
+                    }
+                }) {
+                    Text("Resources")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                        .padding()
+                        .background(Color(hue: 1.0, saturation: 0.83, brightness: 0.5))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+                
+                
+                .frame(height: 75.0)
+                
+                Button(action: {
+                    if let url = URL(string: "https://mslc.sdsu.edu/were-hiring/") {
+                       UIApplication.shared.open(url)
+                    }
+                }) {
+                    Text("Employment")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                        .padding()
+                        .background(Color.black)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    
+                }
+                
+                .frame(height: 75.0)
+                
+                Button(action: {
+                    if let url = URL(string: "https://mslc.sdsu.edu/about-us/") {
+                       UIApplication.shared.open(url)
+                    }
+                }) {
+                    Text("About Us")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color(hue: 1.0, saturation: 0.83, brightness: 0.5))   .clipShape(RoundedRectangle(cornerRadius: 10))
+                        
+                    
+                }
+                .frame(height: 75.0)
+            }
+            
+            .frame(width: 1000)
+
+            
+        }
+        
+        
+    }
+}
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
